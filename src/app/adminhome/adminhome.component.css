@@ -1,0 +1,20 @@
+.container {
+    padding: 2rem 0rem;
+}
+
+.cstm {
+    text-align: center;
+}
+
+.imgset {
+    width: 40px;
+    height: 40px;
+}
+
+.hrr {
+    border-top: 2px solid black;
+}
+
+.topp {
+    margin-top: 10px;
+}

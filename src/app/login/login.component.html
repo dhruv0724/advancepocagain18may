@@ -1,0 +1,130 @@
+<!---
+    <div class="container top  bdr">
+    <div class="container" *ngIf="isDisplay" id="logindiv1">
+        <h2>Admin Login</h2>
+        <div class="form-group">
+            <label>Admin name</label>
+            <input type="text" class="form-control" [(ngModel)]="email">
+
+        </div>
+        <div class="form-group">
+            <label>Password</label>
+            <input type="password" class="form-control" [(ngModel)]="password">
+        </div>
+    </div>
+    <div class="container" *ngIf="!isDisplay" id="logindiv2">
+        <h2>User Login</h2>
+        <div class="form-group">
+            <label>UserID</label>
+            <input type="text" class="form-control" [(ngModel)]="employeeId" required name="name">
+        </div>
+        <div class="form-group">
+            <label>Email</label>
+            <input type="text" class="form-control" [(ngModel)]="empemailId" required name="email">
+        </div>
+        <div class="form-group">
+            <label>password</label>
+            <input type="password" class="form-control" [(ngModel)]="emppass" required>
+        </div>
+        <div class="form-group" *ngIf="otp">
+            <label>OTP</label>
+            <input type="password" class="form-control" [(ngModel)]="otpEntered" required>
+        </div>
+    </div>
+    <div class="container text-center">
+        <div class="form-group" *ngIf="!otp && !isDisplay">
+            <button class="btn btn-primary" (click)="generateOtp()">Generate OTP</button>
+        </div>
+        <div class="form-group" *ngIf="otp || isDisplay">
+            <button class="btn btn-primary" (click)="login()">Login</button>
+        </div>
+        <div class="form-group">
+            <button class="btn btn-primary" (click)="toggledisplay()">Switch User Login</button>
+            <br>
+            <label>Click to change user Login </label>
+
+        </div>
+
+    </div>
+    <div class="container text-center">
+        <div class="form-group">
+            <button class="btn btn-primary" type="submit" (click)="newregister()">New User!</button>
+
+        </div>
+    </div>
+</div>
+-->
+
+<!---new animation login-->
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <!-- Tabs Titles -->
+        <h2>Admin Login</h2>
+        <!-- Icon -->
+        <div class="fadeIn first">
+            <img src="./../../assets/img/logo2.jpg" id="icon" alt="User Icon" />
+        </div>
+
+        <!-- Login Form -->
+
+        <div class="container top  bdr">
+            <div class="container" *ngIf="isDisplay" id="logindiv1">
+                <h2>Admin Login</h2>
+                <div class="form-group">
+
+                    <input type="text" class="fadeIn second" placeholder="ADMIN ID" [(ngModel)]="email">
+
+
+                </div>
+                <div class="form-group">
+
+                    <input type="password" class="fadeIn third" placeholder="Password" [(ngModel)]="password">
+
+                </div>
+            </div>
+            <div class="container" *ngIf="!isDisplay" id="logindiv2">
+                <h2>User Login</h2>
+                <div class="form-group">
+
+                    <input type="text" class="fadeIn second" name="Userid" placeholder="User ID" [(ngModel)]="employeeId">
+                </div>
+                <div class="form-group">
+                    <input type="text" class="fadeIn second" name="Emailid" placeholder="User email" [(ngModel)]="empemailId">
+                </div>
+                <div class="form-group">
+                    <input type="password" class="fadeIn second" name="Password" placeholder="User password" [(ngModel)]="emppass">
+                </div>
+                <div class="form-group" *ngIf="otp">
+
+                    <input type="password" class="fadeIn second" placeholder="Enter OTP" [(ngModel)]="otpEntered" required>
+                </div>
+            </div>
+            <!--user login-->
+
+            <div class="container text-center">
+                <div class="form-group" *ngIf="!otp && !isDisplay">
+                    <input type="submit" class="fadeIn fourth" value="Generate OTP" (click)="generateOtp()">
+                </div>
+                <div class="form-group" *ngIf="otp || isDisplay">
+
+                    <input type="submit" class="fadeIn fourth" value="Login" (click)="login()">
+
+                </div>
+                <div class="form-group">
+                    <input type="submit" class="fadeIn fourth" value="Switch User Login" (click)="toggledisplay()">
+                    <br>
+                    <label>Click to change user Login </label>
+                </div>
+            </div>
+            <div class="container text-center">
+                <div class="form-group">
+
+                    <input type="submit" class="fadeIn fourth" value="New User!" (click)="newregister()">
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+<div class="container mrgn ">
+    <BR>
+    <h2>Add new product</h2>
+
+    <div class="form-group ">
+        <label for="cars">Choose a category</label>
+        <br>
+        <select class="form-select cstmselect" name=" category " [(ngModel)]="selectoption">
+        <option value="shoes ">shoes</option>
+        <option value="clothes ">clothes</option>
+        <option value="mobile ">mobile</option>
+        </select>
+    </div>
+
+    <!-- <div class=" form-group ">
+        <label>productid Id</label>
+        <input type="text " class="form-control " type="text " [(ngModel)]="productid">
+
+    </div> -->
+    <div class=" form-group ">
+        <label>product Name</label>
+        <input type="text " class="form-control " type="text " [(ngModel)]="productname">
+
+    </div>
+    <div class="form-group ">
+        <label>price (₹)</label>
+        <input class="form-control " type="text " [(ngModel)]="productprice">
+    </div>
+    <div class="form-group ">
+        <label>product description</label>
+        <input class="form-control " type="password " [(ngModel)]="productdesc">
+
+    </div>
+    <div class="form-group ">
+        <label>Product Picture</label>
+        <input type="file" id="image" accept="image/*" />
+    </div>
+    <br>
+    <div class="container text-center ">
+        <button class="btn btn-primary " (click)="save() ">Add Product</button>
+        <button type="button" class="btn btn-warning" style="margin-right: 10px;margin-left: 40px;" (click)="reset()">Reset</button>
+    </div>
+    <br>
+    <br>
+</div>
+<div class="container cstm">
+    <h1>Product List</h1>
+    <div class="row">
+        <div class="col-12">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Sno.</th>
+                        <th scope="col">Category</th>
+                        <th scope="col">Product_id</th>
+                        <th scope="col">Product_name</th>
+                        <th scope="col" class="tddwid">Product price ₹</th>
+                        <th scope="col">Product_description</th>
+                        <th scope="col">Product image</th>
+                        <th scope="col">Action</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let product of products; index as i">
+                        <th scope="row">{{i+1}}</th>
+
+                        <td>{{product.select_option}}</td>
+                        <td>{{product.id}}</td>
+                        <td>{{product.product_name}}</td>
+                        <td>₹ {{product.product_price}} </td>
+                        <td>{{product.product_description}}</td>
+                        <td><img class="imgset" [src]="product.image64" /></td>
+                        <td>
+                            <button type="button" class="btn btn-primary" (click)="fillAs(product)">Edit</button>
+                            <button type=" button " class="btn btn-danger " (click)="delete(product)">Delete</button>
+                            <button type=" button " class="btn btn-success " (click)="view(product)">View</button>
+
+
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="container">
+            <hr class="hrr">
+        </div>
+    </div>
+</div>

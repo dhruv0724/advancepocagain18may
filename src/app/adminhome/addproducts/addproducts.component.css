@@ -1,0 +1,20 @@
+.cstmselect {
+    border: solid 2px;
+    padding: 5px;
+    border-radius: 8px;
+    color: white;
+    background-color: blue;
+}
+
+.cstm {
+    text-align: center;
+}
+
+.imgset {
+    width: 80px;
+    height: 120px;
+}
+
+.tddwid {
+    width: 150px;
+}
